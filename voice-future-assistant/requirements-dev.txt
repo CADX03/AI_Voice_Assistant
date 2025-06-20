@@ -1,0 +1,5 @@
+#requirements for development
+-r requirements-prod.txt
+
+pygame>=2.5.0
+pyaudio>=0.2.11

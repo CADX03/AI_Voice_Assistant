@@ -1,0 +1,8 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="220" y="320" width="360" height="260" rx="40" stroke="black" stroke-width="40"/>
+<path d="M140 320H100C77.9086 320 60 302.091 60 280V100C60 77.9086 77.9086 60 100 60H380C402.091 60 420 77.9086 420 100V239.5" stroke="black" stroke-width="40" stroke-linecap="round"/>
+<path d="M271.034 108C289.268 130.285 300.221 158.853 300.221 190C300.221 221.147 289.268 249.715 271.034 272" stroke="black" stroke-width="27.3334" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M225.169 135.102C237.325 150.022 244.627 169.148 244.627 190C244.627 210.853 237.325 229.979 225.169 244.899" stroke="black" stroke-width="27.3334" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 164.289C185.644 171.276 189.034 180.234 189.034 190C189.034 199.767 185.644 208.725 180 215.712" stroke="black" stroke-width="27.3334" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M484 530H445.775L433.27 496.162H365.551L353.281 530H316L377.348 370H422.18L484 530ZM386.315 438.347L375.461 468.151H422.888L411.798 438.347C407.551 426.695 403.303 414.594 399.528 401.597H398.584C394.573 413.922 390.326 426.695 386.315 438.347Z" fill="black"/>
+</svg>

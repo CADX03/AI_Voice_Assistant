@@ -1,0 +1,21 @@
+services:
+    rasa:
+      container_name: "rasa_server"
+      build: 
+        context:  .
+      volumes:
+      - "./:/app" # bind mount whole project folder to container (aka /app)
+      ports: 
+        - "5005:5005"
+      env_file:
+        - .env
+    action_server:
+      container_name: "action_server"
+      build: 
+        context: ./actions
+      volumes:
+        - ./actions:/app/actions
+        - ./data:/app/data
+        - ./endpoints.yml:/app/endpoints.yml
+      ports:
+        - "5055:5055"

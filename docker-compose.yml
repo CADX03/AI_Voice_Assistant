@@ -1,0 +1,38 @@
+services:
+    labs:
+        container_name: labs_frontend
+        build:
+            context: ./labs
+            target: ${APP_ENV:-production}
+            args:
+                - VITE_BACKEND_URL=${VITE_BACKEND_URL:-ws://localhost:8000/ws/call}
+        ports:
+            - "${FRONTEND_PORT:-80}:5173" # development: 5173, production: 80
+        depends_on:
+            - backend
+        environment:
+            - NODE_ENV=${APP_ENV:-production}
+        # Only mount volumes in development # fix later
+        # volumes: ${FRONTEND_VOLUMES:-}
+
+    backend:
+        container_name: fastapi_backend
+        build:
+            context: ./voice-future-assistant
+        environment:
+            - ENV=${APP_ENV:-production}
+            - GOOGLE_CREDENTIALS_B64=${GOOGLE_CREDENTIALS_B64}
+            - AZURE_CREDENTIALS=${AZURE_CREDENTIALS}
+            - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - AWS_SECRET_ACCESS_KEY_B64=${AWS_SECRET_ACCESS_KEY_B64}
+            - ELEVEN_LABS_API_KEY=${ELEVEN_LABS_API_KEY}
+            - AZURE_ENDPOINT=${AZURE_ENDPOINT}
+            - AZURE_GPT_KEY=${AZURE_GPT_KEY}
+            - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+            - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+            - UVICORN_HOST=${UVICORN_HOST:-0.0.0.0}
+            - UVICORN_PORT=${UVICORN_PORT:-8000}
+        ports:
+            - "${BACKEND_PORT:-8000}:8000"
+        # Only mount volumes in development # fix later
+        # volumes: ${BACKEND_VOLUMES:-}

@@ -1,0 +1,26 @@
+flows:
+  return_product:
+    description: Help online retailer client's with product returns
+    steps:
+      - collect: order_number
+        description: the order number of the product
+      - collect: product_details
+        description: the details about the product
+      - action: action_check_order_exists
+        next:
+          - if: not slots.order_exists
+            then:
+              - action: utter_order_not_found
+                next: END
+          - else: order_details_confirmation
+      - collect: order_details_confirmation
+        id: order_details_confirmation
+        next:
+          - if: not slots.order_details_confirmation
+            then: 
+              - action: utter_operation_cancelled
+                next: END
+          - else: 
+              - action: utter_operation_successful
+                next: END
+

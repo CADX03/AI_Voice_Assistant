@@ -1,0 +1,165 @@
+{
+  "00123": {
+    "nome": "João Silva",
+    "data_pedido": "2024-07-15",
+    "data_estimada_entrega": "2024-07-17",
+    "itens_por_categoria": {
+      "Laticínios": [
+        {
+          "produto": "Leite Meio-Gordo UHT (1L)",
+          "quantidade": 6,
+          "preco_unitario": 0.89
+        }
+      ],
+      "Padaria": [
+        {
+          "produto": "Pão de Forma Integral (500g)",
+          "quantidade": 2,
+          "preco_unitario": 1.75
+        }
+      ],
+      "Frutas e Legumes": [
+        {
+          "produto": "Maçãs Golden (kg)",
+          "quantidade": 1.5,
+          "preco_unitario": 1.99
+        }
+      ],
+      "Charcutaria e Queijos": [
+        {
+          "produto": "Queijo Flamengo Fatiado (200g)",
+          "quantidade": 1,
+          "preco_unitario": 2.49
+        }
+      ]
+    },
+    "preco_total_pedido": 12.58
+  },
+  
+  "00124": {
+    "nome": "Maria Oliveira",
+    "data_pedido": "2025-01-22",
+    "data_estimada_entrega": "2024-01-25",
+    "itens_por_categoria": {
+      "Mercearia Salgada": [
+        {
+          "produto": "Arroz Agulha (1kg)",
+          "quantidade": 2,
+          "preco_unitario": 1.29
+        },
+        {
+          "produto": "Azeite Extra Virgem (750ml)",
+          "quantidade": 1,
+          "preco_unitario": 5.99
+        }
+      ],
+      "Higiene e Limpeza": [
+        {
+          "produto": "Detergente Loiça Limão (500ml)",
+          "quantidade": 1,
+          "preco_unitario": 1.85
+        }
+      ],
+      "Peixaria": [
+        {
+          "produto": "Postas de Salmão Fresco (kg)",
+          "quantidade": 0.6,
+          "preco_unitario": 14.99
+        }
+      ]
+    },
+    "preco_total_pedido": 19.41
+  },
+  "00125": {
+    "nome": "Carlos Pereira",
+    "data_pedido": "2024-11-03",
+    "data_estimada_entrega": "2024-11-07",
+    "itens_por_categoria": {
+      "Laticínios": [
+        {
+          "produto": "Iogurte Natural Açucarado (Pack 4x125g)",
+          "quantidade": 2,
+          "preco_unitario": 1.59
+        }
+      ],
+      "Bebidas": [
+        {
+          "produto": "Água Mineral Natural (Pack 6x1.5L)",
+          "quantidade": 1,
+          "preco_unitario": 2.10
+        }
+      ],
+      "Mercearia Doce": [
+        {
+          "produto": "Bolachas Maria (200g)",
+          "quantidade": 3,
+          "preco_unitario": 0.99
+        }
+      ],
+      "Mercearia Salgada": [
+        {
+          "produto": "Café Moído Intenso (250g)",
+          "quantidade": 1,
+          "preco_unitario": 3.45
+        }
+      ]
+    },
+    "preco_total_pedido": 11.70
+  },
+  "00126": {
+    "nome": "Ana Costa",
+    "data_pedido": "2025-03-10",
+    "data_estimada_entrega": "2024-03-12",
+    "itens_por_categoria": {
+      "Talho": [
+        {
+          "produto": "Peitos de Frango (kg)",
+          "quantidade": 0.85,
+          "preco_unitario": 6.99
+        }
+      ],
+      "Mercearia Salgada": [
+        {
+          "produto": "Massa Esparguete (500g)",
+          "quantidade": 2,
+          "preco_unitario": 0.85
+        },
+        {
+          "produto": "Polpa de Tomate (Lata 400g)",
+          "quantidade": 3,
+          "preco_unitario": 0.55
+        }
+      ]
+    },
+    "preco_total_pedido": 9.29
+  },
+  "00127": {
+    "nome": "Ricardo Gomes",
+    "data_pedido": "2024-09-01",
+    "data_estimada_entrega": "2024-09-5",
+    "itens_por_categoria": {
+      "Mercearia Doce": [
+        {
+          "produto": "Cereais de Chocolate (375g)",
+          "quantidade": 1,
+          "preco_unitario": 2.99
+        }
+      ],
+      "Bebidas": [
+        {
+          "produto": "Sumo de Laranja Néctar (1L)",
+          "quantidade": 2,
+          "preco_unitario": 1.19
+        }
+      ],
+      "Frutas e Legumes": [
+        {
+          "produto": "Bananas da Madeira (kg)",
+          "quantidade": 1.2,
+          "preco_unitario": 1.79
+        }
+      ]
+    },
+    "preco_total_pedido": 7.52
+  }
+}

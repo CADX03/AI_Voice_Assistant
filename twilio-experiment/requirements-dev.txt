@@ -1,0 +1,13 @@
+#requirements for development
+-r requirements-prod.txt
+
+pygame>=2.5.0
+pyaudio>=0.2.11
+webrtcvad
+
+#tmb precisei de instalar estes, n sei se foi só mac moment tho
+#google-generativeai
+#boto3<1.36.0,>=1.35.15
+#SpeechRecognition
+#gtts
+#pyttsx3

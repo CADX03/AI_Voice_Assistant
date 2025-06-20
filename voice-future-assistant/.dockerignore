@@ -1,0 +1,8 @@
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.env
+components/py_audio.source.py
+components/pygame_audio.sink.py
+speechLocalRecognition.py

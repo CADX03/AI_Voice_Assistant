@@ -1,0 +1,36 @@
+version: "3.1"
+
+actions:
+  - action_check_order_exists
+
+slots:
+  order_number:
+    type: text
+    mappings:
+      - type: from_llm
+  product_details:
+    type: text
+    mappings:
+      - type: from_llm
+  order_exists:
+    type: bool
+    mappings:
+      - type: from_llm
+  order_details_confirmation:
+    type: bool
+    mappings:
+      - type: from_llm
+
+responses:
+  utter_ask_order_number:
+    - text: "Pode me indicar o número do pedido?"
+  utter_ask_product_details:
+    - text: "Pode-me fornecer mais detalhes sobre o produto que pretende retornar?"
+  utter_order_not_found:
+    - text: "Desculpe, mas não consegui encontrar nenhuma encomenda com esse número. Vou cancelar a operação."
+  utter_ask_order_details_confirmation:
+    - text: "Pode confirmar os seguintes dados? Pretende devolver o produto cujo número de encomenda é {order_number}, com os seguintes detalhes: {product_details}?"
+  utter_operation_cancelled:
+    - text: "A operação foi cancelada"
+  utter_operation_successful:
+    - text: "A operação foi bem-sucedida"

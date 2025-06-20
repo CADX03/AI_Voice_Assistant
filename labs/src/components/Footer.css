@@ -1,0 +1,29 @@
+.footer_container {
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  right: 0;
+  width: 100%;
+  padding: 0.5em 1.5em;
+  transition: bottom 0.3s ease;
+  height: 40px;
+}
+
+.footer_container.visible {
+  bottom: 0; /* Bring the footer to the bottom of the page */
+}
+
+.footer_text {
+  position: relative;
+  font-family: var(--font-base);
+  font-size: var(--size-xsmall);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+}
+
+@media (max-width: 650px) {
+  .footer_text {
+    font-size: var(--size-xxsmall);
+  }
+}

@@ -1,0 +1,113 @@
+.header_container {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em 2em;
+  width: 100%;
+}
+
+.header_left {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.header_left:hover {
+  transform: translateZ(0) scale(1.02); /* slight zoom effect on hover */
+  filter: brightness(1.2);
+}
+
+.header_center1{
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.header_center1:hover {
+  transform: translateZ(0) scale(1.02); /* slight zoom effect on hover */
+  filter: brightness(1.2);
+}
+
+.header_center2{
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.header_center2:hover {
+  transform: translateZ(0) scale(1.02); /* slight zoom effect on hover */
+  filter: brightness(1.2);
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  justify-content: right;
+
+}
+
+.header_right:hover {
+  transform: scale(1.05); /* slight zoom effect on hover */
+}
+
+.header_company_text {
+  position: relative;
+  font-family: var(--font-base);
+  font-size: var(--size-small_2);
+  font-weight: var(--font-regular);
+  background: var(--gradient-light-blue);
+  background-clip: text;
+  -webkit-background-clip: text; /* clip gradient to text */
+  -webkit-text-fill-color: transparent; /* make text transparent so gradient shows */
+}
+
+.header_company_logo {
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+  padding: 0px;
+  filter: brightness(0) saturate(100%) invert(91%) sepia(19%) saturate(342%) hue-rotate(48deg) brightness(103%) contrast(107%)} /* filter that produces the same color as light-green in svg*/
+
+.header_company_text.scrolled {
+    background: none;
+
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: var(--color-black);
+    color: var(--color-black)
+}
+
+.header_company_logo.scrolled {
+  filter: brightness(0) saturate(100%);
+}
+
+.icon_logo.scrolled {
+  filter: brightness(0) saturate(100%);
+}
+
+@media (max-width: 768px) {
+  .header_company_text {
+    font-size: var(--size-small);
+  }
+
+  .header_company_logo {
+    width: 1.5em;
+    height: 1.5em;
+    display:none;
+  }
+}

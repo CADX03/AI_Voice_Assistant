@@ -1,0 +1,266 @@
+
+
+.labspage_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 40px); /* to account for footer size */
+  height: auto;
+  overflow: visible;
+}
+
+.labspage_banner_section {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.labspage_banner_section img {
+  object-fit: cover;
+  width: 110%;
+  height: 120%;
+  animation: rotateIn 30s ease;
+  animation-iteration-count: infinite;
+
+}
+
+.labspage_banner_text {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.5s ease-out;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.labspage_banner_text:hover {
+  transform: translateZ(0) translate(-50%, -50%)  scale(1.01); /* slight zoom effect on hover */
+}
+
+.labspage_banner_title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--size-large);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  column-gap: 0.4em;
+  row-gap: 0em;
+
+}
+
+.labspage_banner_title span:last-of-type {
+  font-weight: var(--font-light);
+  background: var(--gradient-light-blue);
+  background-clip: text;
+  -webkit-background-clip: text; /* clip gradient to text */
+  -webkit-text-fill-color: transparent; /* make text transparent so gradient shows */
+}
+
+.labspage_banner_subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--size-small);
+  font-weight: var(--font-light);
+  margin-top: 0.4em;
+}
+
+.labspage_banner_url {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--size-small);
+  font-weight: var(--font-light);
+  margin-top: 0.4em;
+}
+
+.labspage_bottom_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: calc(25vh - 40px); /* to account for footer size */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  
+}
+
+.labspage_bottom_text {
+  font-size: var(--size-small);
+  font-weight: var(--font-extra-light);
+  color: var(--color-black);
+  text-align: center;
+  padding-top: 1em;
+}
+
+.use_cases {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.use_case_card {
+  width: 30%;
+  height: fit-content;
+  flex-direction: column;
+  color: var(--color-black) !important;
+  background-color: var(--color-white);
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.title {
+  color: var(--color-light-blue);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sub_title {
+  color: var(--color-dark-blue);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.chat-bubble {
+  width: 95%;
+  padding: 18px 24px;
+  border-radius: 16px;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #111;
+}
+
+.user_text {
+  background: #e7f2fc;
+  padding: 9px 12px;
+  align-self: flex-start;
+  border-radius: 20px 20px 20px 4px;
+  color: #111 !important;
+}
+
+.ai_text {
+  background: #e6fae6;
+  padding: 9px 12px;
+  align-self: flex-end;
+  border-radius: 20px 20px 4px 20px;
+  color: #111 !important;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6a7a8c;
+  margin-bottom: 6px;
+}
+
+.use_case_card:hover {
+  transform: scale(1.02);
+}
+
+
+/*Animations*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: translate(-5%, -10%) rotate(2deg) scale(1);
+  }
+  25% {
+    transform: translate(-5%, -10%) rotate(-2deg) scale(1.03);
+  }
+  50% {
+    transform: translate(-5%, -10%) rotate(1.5deg) scale(1.02);
+  }
+  75% {
+    transform: translate(-5%, -10%) rotate(-1.8deg) scale(1.08);
+  }
+  100% {
+    transform: translate(-5%, -10%) rotate(2deg) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .labspage_banner_title {
+    font-size: var(--size-xmedium_3);
+    line-height: 1.2em;
+    padding-bottom: 0.2em;
+  }
+
+  .labspage_banner_subtitle {
+    font-size: var(--size-small);
+  }
+
+  .labspage_bottom_text{
+    font-size: var(--size-xsmall_2);
+  }
+}
+
+@media (max-width: 650px) {
+  .button_div.sticky {
+    top: 7rem;
+    width: 4em !important;
+    height: 4em !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .labspage_banner_title {
+    font-size: var(--size-xmedium);
+  }
+
+  .labspage_banner_subtitle {
+    font-size: var(--size-xsmall_2);
+  }
+}
+
+@media (max-width: 768px) {
+  .use_cases {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .use_case_card {
+    width: 80%;
+    max-width: 320px;
+    height: 360px;
+  }
+}

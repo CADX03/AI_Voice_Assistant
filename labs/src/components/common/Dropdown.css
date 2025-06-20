@@ -1,0 +1,230 @@
+/* 
+### non clickable dropdown related 
+*/
+.dropdown_display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown_display.line_left_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  column-gap: 0.6em;
+}
+
+.dropdown_display_text {
+  font-family: var(--font-base);
+  font-size: var(--size-xsmall_2);
+  font-weight: var(--font-light);
+  color: var(--color-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.section_sub_div_text {
+  font-weight: var(--font-medium);
+}
+
+/* 
+### clickable dropdown related 
+*/
+
+.dropdown_container {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input_line {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  background: var(--color-grey);
+  padding: 0.3em 1.2em;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  column-gap: 0.5rem;
+}
+
+/*make the border have a gradient as color */
+.gradient {
+  background: var(--gradient-light-blue-2);
+}
+
+  .input_line::before {
+    content: "";
+    position: absolute;
+    top: 0.1rem; left: 0.1rem; right: 0.1rem; bottom: 0.1rem;
+    background: white; /* div inner background color*/
+    border-radius: 25px; /* slightly smaller to fit inside */
+    z-index: 1;
+  }
+
+  .input_line > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .input_line:hover {
+    filter: brightness(1.1);
+  }
+
+  .line_text.gradient {
+    background: var(--gradient-light-blue-2);
+    background-clip: text;
+    -webkit-background-clip: text; /* clip gradient to text */
+    -webkit-text-fill-color: transparent; /* make text transparent so gradient shows */
+    color: transparent;
+  }
+
+.input_line:hover {
+  filter: brightness(1.1);
+}
+
+.line_left_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex: 1;
+  column-gap: 0.6em;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.line_text {
+  font-family: var(--font-base);
+  font-size: var(--size-small);
+  font-weight: var(--font-regular);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-black);
+}
+
+/* 
+### selection modal related
+*/
+
+.selection_div {
+  position: relative;
+  background: var(--color-white);
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  left: 0;
+  width: 100%;
+  top: 100%;
+  margin: 0.5rem 0 0 0;
+  padding: 5px;
+  box-shadow: var(--light-shadow);
+  z-index: 10;
+}
+
+.selection_option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.3em 1.2em;
+  border-radius: 18px;
+  column-gap: 0.6em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.selection_option:hover {
+  background: var(--gradient-light-blue-2);
+}
+
+.dropdown_text {
+  font-family: var(--font-base);
+  font-size: var(--size-small);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown_text.selected {
+  font-weight: var(--font-medium)
+}
+
+@media (max-width: 1024px) {
+  .dropdown_display_text,
+  .dropdown_text, .dropdown_text.selected,
+  .line_text {
+    font-size: var(--size-xsmall);
+  }
+  .input_line {
+    padding: 0.25em 1em;
+  }
+  .selection_div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .input_line {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    padding: 0.5em 1em;
+  }
+  .selection_div {
+    left: 0;
+    top: 100%;
+    margin: 0.5rem 0 0 0;
+    width: 100%;
+  }
+  .selection_option {
+    padding: 0.5em 1em;
+  }
+  .dropdown_text,
+  .dropdown_text.selected,
+  .line_text {
+    font-size: var(--size-xsmall);
+  }
+
+  .icon_dropdown .icon_logo  {
+    width: 1em !important;
+    height: 1em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .input_line {
+    padding: 0.4em 0.8em;
+  }
+  .selection_div {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .dropdown_display_text,
+  .dropdown_text, .dropdown_text.selected,
+  .line_text {
+    font-size: var(--size-xxsmall);
+  }
+  .selection_option {
+    align-items: flex-start;
+    row-gap: 0.4rem;
+  }
+
+  .icon_dropdown .icon_logo  {
+    width: 0.8em !important;
+    height:  0.8em !important;
+  }
+}
+

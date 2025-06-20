@@ -1,0 +1,68 @@
+.micbutton_container {
+  width: 7em;
+  height: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-vertical-dark-blue);
+  border-radius: 100%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.micbutton_container:focus {
+  outline:none;
+}
+
+.micbutton_container:hover:not(.disabled) {
+  transform: translate(-50%, -50%) scale(1.03);
+  filter: brightness(1.2);
+}
+
+.micbutton_container.toggled {
+  box-shadow: 0 0px 55px 20px var(--color-light-blue); /* Permanent shadow when toggled */
+  filter: brightness(1.2);
+}
+
+/* when toggled of no shadow*/
+.micbutton_container:not(.toggled) {
+  box-shadow: 1px 4px 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+.micbutton_container.disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(0.7);
+  filter: grayscale(0.7);
+}
+
+.micbutton_logo {
+  width: 52%;
+  height: 52%;
+  object-fit: contain;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .micbutton_container {
+    width: 6em;
+    height: 6em;
+  }
+  .micbutton_logo {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 490px) {
+  .micbutton_container {
+    width: 5em;
+    height: 5em;
+  }
+  .micbutton_logo {
+    width: 50%;
+    height: 50%;
+  }
+}

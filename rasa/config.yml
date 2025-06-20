@@ -1,0 +1,24 @@
+# recipe: default.v1
+# language: en
+# pipeline:
+#   - name: SingleStepLLMCommandGenerator
+#     llm:
+#       model_group: openai-gpt-4
+
+# policies:
+#   - name: FlowPolicy
+#   - name: IntentlessPolicy
+
+recipe: default.v1
+language: pt
+pipeline:
+- name: SingleStepLLMCommandGenerator
+  llm:
+    model_group: rasa_command_generation_model
+  flow_retrieval:
+    active: false
+
+policies:
+- name: FlowPolicy
+#  - name: EnterpriseSearchPolicy
+assistant_id: 20250312-183808-swift-salamander
